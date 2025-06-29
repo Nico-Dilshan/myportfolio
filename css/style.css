@@ -1,0 +1,1108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0f172a;
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 18px; /* Add padding to prevent content hiding behind fixed header */
+}
+
+/* Utility Classes */
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.glassmorphism {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Animations */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Tech Icons */
+.tech-icon {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-icon:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Float Animation */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-15px); 
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* FIXED Sticky Navigation - UPDATED */
+.nav-blur {
+    background: rgba(30, 41, 59, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    transition: all 0.3s ease;
+}
+
+/* Remove any conflicting styles */
+nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+}
+
+.nav-blur.scrolled {
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: blur(25px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+    background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+    border-radius: 9999px;
+    height: 8px;
+    width: 75%;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    100% { left: 100%; }
+}
+
+/* Service Items */
+.service-item {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.service-item:hover {
+    background: rgba(55, 65, 81, 0.3);
+    transform: translateX(8px);
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* Profile Image */
+.profile-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Social Icons */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #8b5cf6;
+    transform: translateY(-3px);
+}
+
+/* Projects Section Enhancements */
+.projects-scroll-container {
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 92, 246, 0.5) rgba(30, 41, 59, 0.3);
+    scroll-behavior: smooth;
+}
+
+/* Custom Webkit Scrollbar */
+.projects-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.projects-scroll-container::-webkit-scrollbar-track {
+    background: rgba(30, 41, 59, 0.3);
+    border-radius: 10px;
+}
+
+.projects-scroll-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    border-radius: 10px;
+    border: 2px solid rgba(30, 41, 59, 0.3);
+}
+
+.projects-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+}
+
+/* Project Card Enhanced Styles */
+.project-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.project-card:hover {
+    transform: translateX(8px);
+    background: rgba(55, 65, 81, 0.2);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Scroll Fade Effect */
+.projects-scroll-container::before,
+.projects-scroll-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 8px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.projects-scroll-container::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(30, 41, 59, 0.4), transparent);
+}
+
+.projects-scroll-container::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(30, 41, 59, 0.4), transparent);
+}
+
+.projects-container {
+    position: relative;
+}
+
+/* Animation for scroll hint */
+@keyframes scrollHint {
+    0%, 100% { opacity: 0.5; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(3px); }
+}
+
+.scroll-hint {
+    animation: scrollHint 2s ease-in-out infinite;
+}
+
+/* Compact Button Animation for Let's Work Together */
+.btn-work-together {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    display: inline-block;
+    width: auto;
+}
+
+.btn-work-together:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+    background: linear-gradient(135deg, #9333ea 0%, #8b5cf6 100%);
+}
+
+.btn-work-together:active {
+    transform: translateY(-1px);
+}
+
+/* Custom Tech Icons */
+.flutter-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2354C5F0' d='M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tailwind-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2306B6D4' d='M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C7.666,17.818,9.027,19.2,12.001,19.2c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dart-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2300D2B8' d='M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H9.789l-9.942-9.263s-.788-.912-.788-1.678c0-.766.316-1.481.316-1.481L4.105 4.105zm8.421 9.263h7.368v7.368h-7.368v-7.368z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Off-canvas Menu Styles */
+.off-canvas-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.off-canvas-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.off-canvas-menu {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 280px;
+    height: 100vh;
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(148, 163, 184, 0.1);
+    z-index: 9999;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.off-canvas-menu.show {
+    left: 0;
+}
+
+.off-canvas-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.off-canvas-menu-item:hover {
+    background: rgba(139, 92, 246, 0.1);
+    color: #a855f7;
+    transform: translateX(8px);
+}
+
+.off-canvas-menu-item.active {
+    color: #a855f7;
+    background: rgba(139, 92, 246, 0.1);
+}
+
+.off-canvas-menu-item i {
+    width: 20px;
+    margin-right: 12px;
+    text-align: center;
+}
+
+/* Slide Animations */
+@keyframes slide-in {
+    from {
+        left: -320px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 0;
+    }
+    to {
+        left: -320px;
+    }
+}
+
+/* Mobile Hire Button */
+.mobile-hire-btn {
+    margin: 20px 24px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    text-decoration: none;
+}
+
+.mobile-hire-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+    text-decoration: none;
+    color: white;
+}
+
+/* Off-Canvas Logo Section */
+.off-canvas-logo-section {
+    padding: 24px 24px 32px 24px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.off-canvas-logo {
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+/* Mobile Hamburger Icon */
+.mobile-hamburger {
+    font-size: 24px !important;
+    padding: 8px;
+    margin-right: 16px;
+    transition: all 0.3s ease;
+}
+
+.mobile-hamburger:hover {
+    transform: scale(1.1);
+}
+
+/* Desktop Menu Icons Styling */
+.desktop-nav-item {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.desktop-nav-item:hover {
+    text-decoration: none;
+}
+
+.desktop-nav-item i {
+    margin-right: 6px;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.desktop-nav-item:hover i {
+    transform: scale(1.1);
+}
+
+/* Ripple Animation */
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    body {
+        padding-top: 30px; /* Smaller padding for mobile */
+    }
+    
+    .projects-scroll-container {
+        height: 300px;
+    }
+    
+    .mobile-hamburger {
+        margin-right: 8px;
+    }
+    
+    .off-canvas-menu {
+        width: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 30px; /* Even smaller for very small screens */
+    }
+    
+    .off-canvas-menu {
+        width: 240px;
+    }
+    
+    .glassmorphism {
+        margin: 0 8px;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .animate-float {
+        animation: none;
+    }
+}
+
+/* Focus States for Accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid #8b5cf6;
+    outline-offset: 2px;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.loaded {
+    opacity: 1;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Print Styles */
+@media print {
+    .off-canvas-menu,
+    .off-canvas-overlay,
+    nav {
+        display: none !important;
+    }
+    
+    body {
+        padding-top: 0 !important;
+    }
+}
+
+/* Remove square click effect on desktop navigation */
+.desktop-nav-item {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    outline: none !important; /* Remove outline */
+    border: none !important; /* Remove border */
+    box-shadow: none !important; /* Remove box shadow */
+}
+
+.desktop-nav-item:hover {
+    text-decoration: none;
+    outline: none !important;
+}
+
+.desktop-nav-item:focus {
+    outline: none !important; /* Remove focus outline */
+    box-shadow: none !important;
+}
+
+.desktop-nav-item:active {
+    outline: none !important; /* Remove active state outline */
+    box-shadow: none !important;
+    transform: none; /* Remove any transform effects */
+}
+
+.desktop-nav-item:visited {
+    outline: none !important;
+}
+
+/* Also remove from anchor tags in general */
+a.desktop-nav-item {
+    -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
+    outline: none !important;
+    border: none !important;
+}
+
+a.desktop-nav-item:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+
+
+/* Mobile About Page Fixes */
+@media (max-width: 1024px) {
+    .about-scroll-container {
+        height: auto;
+        overflow-y: visible;
+        padding-right: 0;
+    }
+    
+    .lg\:sticky {
+        position: relative;
+        top: auto;
+    }
+    
+    /* Mobile stats grid fix */
+    .stats-item {
+        background: rgba(55, 65, 81, 0.2);
+        border-radius: 8px;
+        border: 1px solid rgba(148, 163, 184, 0.1);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile experience cards */
+    .experience-item {
+        margin-left: 0;
+        padding-left: 1rem;
+    }
+    
+    .experience-item .border-l-4::before {
+        left: -6px;
+        width: 8px;
+        height: 8px;
+    }
+    
+    /* Mobile tech icons */
+    .tech-icon .w-12 {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    /* Mobile text sizing */
+    .text-2xl {
+        font-size: 1.25rem;
+        line-height: 1.65rem;
+    }
+    
+    /* Mobile spacing fixes */
+    .space-y-6 > * + * {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small mobile fixes */
+    .glassmorphism {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+    
+    /* Mobile profile adjustments */
+    .w-24 {
+        width: 5rem;
+        height: 5rem;
+    }
+
+
+
+ 
+ /* ================================================
+   SERVICES PAGE SPECIFIC STYLES
+   ================================================ */
+
+/* Service Cards Enhanced Hover Effects */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Service Icon Animations */
+.service-icon {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+/* Service Arrow Animation */
+.service-arrow {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-arrow {
+    transform: translateX(5px);
+}
+
+/* Hero Section Animation */
+.services-hero {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered Animation for Service Cards */
+.service-card:nth-child(1) {
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.service-card:nth-child(2) {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.service-card:nth-child(3) {
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.service-card:nth-child(4) {
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 1024px) {
+    .service-card {
+        margin-bottom: 1rem;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-4px);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .service-icon {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-icon i {
+        font-size: 1.25rem;
+    }
+    
+    h1 {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+    
+    h2, h3 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        padding: 1.25rem;
+    }
+    
+    .glassmorphism {
+        margin: 0 0.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    
+    .text-3xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+
+/* Enhanced Button Hover for Services */
+.service-card .btn-work-together:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.4);
+}
+
+/* Scroll Animation for Services */
+.services-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.services-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/* ================================================
+   PROJECTS PAGE SPECIFIC STYLES
+   ================================================ */
+
+/* Project Cards Enhanced */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Project Image Hover Effects */
+.project-image {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* Project Category Tags */
+.project-card span[class*="bg-"] {
+    font-weight: 500;
+    letter-spacing: 0.025em;
+}
+
+/* Project Buttons Animation */
+.project-card button {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover button {
+    transform: scale(1.1);
+}
+
+/* Staggered Animation for Project Cards */
+.project-card:nth-child(1) {
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.project-card:nth-child(2) {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.project-card:nth-child(3) {
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.project-card:nth-child(4) {
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.project-card:nth-child(5) {
+    animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.project-card:nth-child(6) {
+    animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+/* Project Image Icons */
+.project-image i {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-image i {
+    transform: scale(1.2);
+}
+
+/* Hover Overlay Buttons */
+.project-card .absolute button {
+    backdrop-filter: blur(10px);
+}
+
+/* Mobile Responsive Adjustments for Projects */
+@media (max-width: 1024px) {
+    .project-card:hover {
+        transform: translateY(-4px);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    
+    .project-image {
+        height: 12rem;
+    }
+    
+    .project-card h3 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    
+    .project-card p {
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-image {
+        height: 10rem;
+    }
+    
+    .project-card .p-6 {
+        padding: 1rem;
+    }
+}
+
+/* Enhanced Glassmorphism for Project Cards */
+.project-card.glassmorphism {
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.project-card:hover.glassmorphism {
+    border-color: rgba(139, 92, 246, 0.4);
+    background: rgba(30, 41, 59, 0.5);
+}
+
+
+
+
+/* ================================================
+   CONTACT PAGE SPECIFIC STYLES
+   ================================================ */
+
+/* Contact Form Styling */
+.contact-form input,
+.contact-form textarea {
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.15);
+}
+
+/* Contact Info Cards */
+.contact-info-item {
+    transition: all 0.3s ease;
+}
+
+.contact-info-item:hover {
+    transform: translateX(8px);
+}
+
+/* Map Container Enhancement */
+.map-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.map-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(139, 92, 246, 0.1), rgba(30, 41, 59, 0.1));
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Social Icons Enhancement */
+.social-icon-contact {
+    transition: all 0.3s ease;
+}
+
+.social-icon-contact:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Form Animation */
+.contact-form-animate {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.contact-info-animate {
+    animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 1024px) {
+    .contact-form-animate,
+    .contact-info-animate {
+        animation: fadeInUp 0.6s ease-out;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .map-container {
+        height: 250px;
+    }
+    
+    .contact-info-item {
+        padding: 1rem;
+    }
+}
+
+/* Button Loading State */
+.btn-loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.btn-loading .fas {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Enhanced Form Focus States */
+input:focus + label,
+textarea:focus + label {
+    color: #a855f7;
+    transform: translateY(-2px);
+}
+
+/* Contact Page Hero Animation */
+.contact-hero {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+    
+}
+
+
+
+

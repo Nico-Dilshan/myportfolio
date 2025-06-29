@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Nico Dilshan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-in': 'slide-in 0.3s ease-out',
+                        'slide-out': 'slide-out 0.3s ease-in',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-white min-h-screen">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Hero Section -->
+        <div class="text-center py-12 lg:py-16">
+            <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 text-white">
+                Services <span class="text-purple-400">I Provide</span>
+            </h1>
+            <p class="text-slate-400 text-base lg:text-lg xl:text-xl max-w-4xl mx-auto leading-relaxed">
+                I offer custom web solutions tailored to your needs, from sleek front-end designs to powerful back-end development. Let's turn your ideas into reality with clean, fast, and responsive results.
+            </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12 lg:mb-16">
+            
+            <!-- UI/UX Design Service -->
+            <div class="glassmorphism rounded-2xl p-6 lg:p-8 card-hover service-card">
+                <div class="service-icon w-16 h-16 bg-pink-600/20 rounded-xl flex items-center justify-center mb-6 border border-pink-600/30">
+                    <i class="fas fa-paint-brush text-pink-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-bold mb-4 text-white">UI / UX Design</h3>
+                <p class="text-slate-400 mb-6 leading-relaxed text-sm lg:text-base">
+                    Designing intuitive and visually appealing interfaces that enhance user experience.
+                </p>
+                <a href="contact.html">
+                <div class="flex items-center text-purple-400 cursor-pointer group">
+                    <span class="font-medium text-sm lg:text-base">Learn More</span>
+                    <i class="fas fa-arrow-right ml-2 service-arrow transition-transform duration-300 group-hover:translate-x-1"></i>
+                </div>
+                </a>
+            </div>
+
+            <!-- Web Development Service -->
+            <div class="glassmorphism rounded-2xl p-6 lg:p-8 card-hover service-card">
+                <div class="service-icon w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6 border border-blue-600/30">
+                    <i class="fas fa-code text-blue-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-bold mb-4 text-white">Web Development</h3>
+                <p class="text-slate-400 mb-6 leading-relaxed text-sm lg:text-base">
+                    I build fast, responsive, and scalable websites tailored to your business needs.
+                </p>
+                <a href="contact.html">
+                <div class="flex items-center text-purple-400 cursor-pointer group">
+                    <span class="font-medium text-sm lg:text-base">Learn More</span>
+                    <i class="fas fa-arrow-right ml-2 service-arrow transition-transform duration-300 group-hover:translate-x-1"></i>
+                </div>
+                </a>
+            </div>
+
+            <!-- LMS Development Service -->
+            <div class="glassmorphism rounded-2xl p-6 lg:p-8 card-hover service-card">
+                <div class="service-icon w-16 h-16 bg-orange-600/20 rounded-xl flex items-center justify-center mb-6 border border-orange-600/30">
+                    <i class="fas fa-graduation-cap text-orange-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-bold mb-4 text-white">LMS Development</h3>
+                <p class="text-slate-400 mb-6 leading-relaxed text-sm lg:text-base">
+                    I build custom LMS platforms that make online learning easy, interactive, and efficient.
+                </p>
+                <a href="contact.html">
+                <div class="flex items-center text-purple-400 cursor-pointer group">
+                    <span class="font-medium text-sm lg:text-base">Learn More</span>
+                    <i class="fas fa-arrow-right ml-2 service-arrow transition-transform duration-300 group-hover:translate-x-1"></i>
+                </div>
+                </a>
+            </div>
+
+            <!-- App Development Service -->
+            <div class="glassmorphism rounded-2xl p-6 lg:p-8 card-hover service-card">
+                <div class="service-icon w-16 h-16 bg-green-600/20 rounded-xl flex items-center justify-center mb-6 border border-green-600/30">
+                    <i class="fas fa-mobile-alt text-green-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-bold mb-4 text-white">App Development</h3>
+                <p class="text-slate-400 mb-6 leading-relaxed text-sm lg:text-base">
+                    I develop high-quality mobile apps with smooth performance and sleek design for both Android and iOS.
+                </p>
+                <a href="contact.html">
+                <div class="flex items-center text-purple-400 cursor-pointer group">
+                    <span class="font-medium text-sm lg:text-base">Learn More</span>
+                    <i class="fas fa-arrow-right ml-2 service-arrow transition-transform duration-300 group-hover:translate-x-1"></i>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Ready to Collaborate Section -->
+        <div class="glassmorphism rounded-2xl p-8 lg:p-12 card-hover text-center">
+            <h2 class="text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 lg:mb-6 text-white">
+                Ready to Collaborate
+            </h2>
+            <h3 class="text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 lg:mb-8 text-white">
+                and Elevate? <span class="text-3xl lg:text-4xl xl:text-5xl">🚀</span>
+            </h3>
+            <p class="text-slate-400 text-sm lg:text-base xl:text-lg max-w-3xl mx-auto mb-8 lg:mb-10 leading-relaxed">
+                Whether you're launching a startup, rebranding or just getting started, I'm here to craft digital solutions that are fast, beautiful and user focused.
+            </p>
+            
+            <!--Contact Button-->
+            <a href="contact.html">
+            <button class="btn-work-together px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-medium text-base lg:text-lg">
+                Let's Work Together
+            </button>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

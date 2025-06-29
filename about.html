@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Nico Dilshan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-in': 'slide-in 0.3s ease-out',
+                        'slide-out': 'slide-out 0.3s ease-in',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-white min-h-screen">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Left Side - Profile Card (Same as Home) -->
+            <div class="lg:col-span-1 order-1 lg:order-1">
+                <div class="glassmorphism rounded-2xl p-6 lg:p-8 card-hover animate-float lg:sticky lg:top-24">
+                    <div class="text-center">
+                        <div class="w-24 h-24 lg:w-32 lg:h-32 mx-auto mb-4 lg:mb-6 profile-image">
+                            <img src="images/profile.png" 
+                                 alt="Nico Dilshan" 
+                                 class="profile-img">
+                        </div>
+                        
+                        <h2 class="text-xl lg:text-2xl font-bold mb-2 lg:mb-3 text-white">Nico Dilshan</h2>
+                        <p class="text-slate-400 mb-4 lg:mb-6 leading-relaxed text-xs lg:text-sm">
+                            A Passionate Full Stack Web Developer with 2 years of experience building fast, modern and scalable websites.
+                        </p>
+                        
+                        <button onclick="window.location.href='tel:0742647449'" class="btn-primary px-6 py-3 rounded-lg mb-6 flex items-center mx-auto font-medium">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Contact Me
+                        </button>
+                        
+                        <div class="flex flex-col lg:flex-row justify-center items-center space-y-3 lg:space-y-0 lg:space-x-6">
+                            <span class="text-slate-400 text-xs lg:text-sm">Follow Me</span>
+                            <div class="flex space-x-3 lg:space-x-4">
+
+                                <!--Facebook -->
+                                <a href="#" class="social-icon text-slate-400 hover:text-purple-400">
+                                    <i class="fab fa-facebook text-lg lg:text-xl"></i>
+                                </a>
+
+                                <!--Instagram -->
+                                <a href="#" class="social-icon text-slate-400 hover:text-purple-400">
+                                    <i class="fab fa-instagram text-lg lg:text-xl"></i>
+                                </a>
+
+                                <!--Linkdin -->
+                                <a href="https://www.linkedin.com/in/nicodilshan" class="social-icon text-slate-400 hover:text-purple-400" 
+                                     target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin text-xl"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Scrollable Content -->
+            <div class="lg:col-span-2 order-2 lg:order-2">
+                <div class="about-scroll-container space-y-6 lg:space-y-8">
+                    
+                    <!-- Hero Intro Section with Text Center -->
+                    <div class="glassmorphism rounded-2xl p-6 lg:p-8 card-hover text-left">
+                        <h1 class="text-2xl lg:text-3xl font-bold mb-3 lg:mb-4 text-white">
+                            Hi, I'm <span class="text-purple-400">Nico Dilshan</span><br>
+                            Web Developer.
+                        </h1>
+                        
+                        <p class="text-slate-400 mb-4 lg:mb-6 leading-relaxed text-sm lg:text-base text-justify">
+                            I'm passionate about turning ideas into beautiful, functional websites 
+                            that not only look great but also work smoothly. From designing eye-catching 
+                            layouts to building powerful back-end systems, I handle every part of the 
+                            web development process.
+                        </p>
+                        
+                        <p class="text-slate-400 mb-6 lg:mb-8 leading-relaxed text-sm lg:text-base text-justify">
+                            Whether you need a personal site, an online store or a custom 
+                            business solution, I'm here to help bring your vision to life clean, fast 
+                            and responsive. Let's create something amazing together!
+                        </p>
+                        
+                        <!-- Stats Row -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-8 text-center">
+                            <div class="stats-item p-3 lg:p-0">
+                                <div class="text-purple-400 text-xl lg:text-2xl font-bold mb-1">15+</div>
+                                <div class="text-slate-400 text-xs lg:text-sm">Project Completed</div>
+                            </div>
+                            <div class="stats-item p-3 lg:p-0">
+                                <div class="text-purple-400 text-xl lg:text-2xl font-bold mb-1">10+</div>
+                                <div class="text-slate-400 text-xs lg:text-sm">Client Testimonials</div>
+                            </div>
+                            <div class="stats-item p-3 lg:p-0">
+                                <div class="text-purple-400 text-xl lg:text-2xl font-bold mb-1">02+</div>
+                                <div class="text-slate-400 text-xs lg:text-sm">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- My Experiences Section -->
+                    <div class="glassmorphism rounded-2xl p-6 lg:p-8 card-hover">
+                        <h3 class="text-lg lg:text-xl font-bold text-white mb-4 lg:mb-6">My Experiences</h3>
+                        
+                        <div class="space-y-4 lg:space-y-6">
+                            <!-- Experience 1 -->
+                            <div class="experience-item border-l-4 border-purple-400 pl-4 lg:pl-6 bg-slate-700/30 rounded-xl p-4 lg:p-6">
+                                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-2">
+                                    <h4 class="font-semibold text-white text-base lg:text-lg mb-1 lg:mb-0">Web Developer</h4>
+                                    <span class="text-purple-400 text-xs lg:text-sm font-medium bg-purple-400/20 px-2 lg:px-3 py-1 rounded-full w-fit">2023 - Present</span>
+                                </div>
+                                <p class="text-slate-400 text-xs lg:text-sm mb-2 lg:mb-3 font-medium">Self - Employed</p>
+                                <p class="text-slate-400 text-xs lg:text-sm leading-relaxed">
+                                    Providing custom web development services for global clients using modern tools and best practices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- My Expert Area Section -->
+                    <div class="glassmorphism rounded-2xl p-6 lg:p-8 card-hover">
+                        <h3 class="text-lg lg:text-xl font-bold text-white mb-4 lg:mb-6">My Expert Area</h3>
+                        
+                        <!-- Mobile: 2 rows x 3 columns, Desktop: 2 rows x 3 columns -->
+                        <div class="grid grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6">
+                            <div class="text-center tech-icon">
+                                <div class="w-12 h-12 lg:w-16 lg:h-16 bg-pink-600/20 rounded-xl flex items-center justify-center mx-auto mb-2 lg:mb-3 border border-pink-600/30">
+                                    <i class="fab fa-figma text-pink-400 text-lg lg:text-2xl"></i>
+                                </div>
+                                <span class="text-xs lg:text-sm text-white font-medium">Figma</span>
+                            </div>
+                            
+                            <div class="text-center tech-icon">
+                                <div class="w-12 h-12 lg:w-16 lg:h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mx-auto mb-2 lg:mb-3 border border-blue-600/30">
+                                    <div class="flutter-icon" style="width: 18px; height: 18px;"></div>
+                                </div>
+                                <span class="text-xs lg:text-sm text-white font-medium">Flutter</span>
+                            </div>
+                            
+                            <div class="text-center tech-icon">
+                                <div class="w-12 h-12 lg:w-16 lg:h-16 bg-blue-800/20 rounded-xl flex items-center justify-center mx-auto mb-2 lg:mb-3 border border-blue-800/30">
+                                    <i class="fab fa-wordpress text-blue-300 text-lg lg:text-2xl"></i>
+                                </div>
+                                <span class="text-xs lg:text-sm text-white font-medium">WordPress</span>
+                            </div>
+                            
+                            <div class="text-center tech-icon">
+                                <div class="w-12 h-12 lg:w-16 lg:h-16 bg-teal-600/20 rounded-xl flex items-center justify-center mx-auto mb-2 lg:mb-3 border border-teal-600/30">
+                                    <div class="dart-icon" style="width: 18px; height: 18px;"></div>
+                                </div>
+                                <span class="text-xs lg:text-sm text-white font-medium">Dart</span>
+                            </div>
+                            
+                            <div class="text-center tech-icon">
+                                <div class="w-12 h-12 lg:w-16 lg:h-16 bg-orange-600/20 rounded-xl flex items-center justify-center mx-auto mb-2 lg:mb-3 border border-orange-600/30">
+                                    <i class="fab fa-html5 text-orange-400 text-lg lg:text-2xl"></i>
+                                </div>
+                                <span class="text-xs lg:text-sm text-white font-medium">HTML</span>
+                            </div>
+                            
+                            <div class="text-center tech-icon">
+                                <div class="w-12 h-12 lg:w-16 lg:h-16 bg-teal-600/20 rounded-xl flex items-center justify-center mx-auto mb-2 lg:mb-3 border border-teal-600/30">
+                                    <div class="tailwind-icon" style="width: 18px; height: 18px;"></div>
+                                </div>
+                                <span class="text-xs lg:text-sm text-white font-medium">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ready to Collaborate Section -->
+                    <div class="glassmorphism rounded-2xl p-6 lg:p-8 card-hover text-center">
+                        <h3 class="text-2xl lg:text-3xl font-bold mb-2 text-white">Ready to Collaborate</h3>
+                        <h4 class="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-white">and Elevate? <span class="text-3xl lg:text-4xl">🚀</span></h4>
+                        <p class="text-slate-400 mb-6 lg:mb-8 leading-relaxed text-sm lg:text-lg max-w-2xl mx-auto">
+                            Whether you're launching a startup, rebranding or just getting started, I'm here to craft digital solutions that are fast, beautiful and user focused.
+                        </p>
+                        
+                        <!--Contact Button-->
+                        <a href="contact.html">
+                           <button class="btn-work-together px-6 py-3 rounded-lg font-medium text-white">
+                               Let's Work Together
+                           </button>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

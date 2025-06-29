@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nico Dilshan - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-in': 'slide-in 0.3s ease-out',
+                        'slide-out': 'slide-out 0.3s ease-in',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-white min-h-screen">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Profile Card with Your Image -->
+            <div class="glassmorphism rounded-2xl p-8 card-hover animate-float">
+                <div class="text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 profile-image">
+                        <img src="images/profile.png" 
+                             alt="Nico Dilshan" 
+                             class="profile-img">
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold mb-3 text-white">Nico Dilshan</h2>
+                    <p class="text-slate-400 mb-6 leading-relaxed text-sm">
+                        A Passionate Full Stack Web Developer with 2 years of experience building fast, modern and scalable websites.
+                    </p>
+                    
+                    <button onclick="window.location.href='tel:0742647449'" class="btn-primary px-6 py-3 rounded-lg mb-6 flex items-center mx-auto font-medium">
+                    <i class="fas fa-envelope mr-2"></i>
+                        Contact Me
+                    </button>
+
+                    
+                    <div class="flex justify-center items-center space-x-6">
+                        <span class="text-slate-400 text-sm">Follow Me</span>
+                        <div class="flex space-x-4">
+
+                            <!--Facebook -->
+                            <a href="#" class="social-icon text-slate-400 hover:text-purple-400">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+
+                            <!--Instagram -->
+                            <a href="#" class="social-icon text-slate-400 hover:text-purple-400">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+
+                            <!--Linkdin -->
+                            <a href="https://www.linkedin.com/in/nicodilshan" class="social-icon text-slate-400 hover:text-purple-400" 
+                                target="_blank" rel="noopener noreferrer">
+                               <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Projects Card with Vertical Scroll -->
+            <div class="glassmorphism rounded-2xl p-8 card-hover projects-container">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold text-white">My Projects</h3>
+                    <div class="scroll-hint text-purple-400">
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </div>
+                </div>
+                
+                <div class="projects-scroll-container space-y-4 pr-2">
+
+                    <!-- Project 1 -->
+                    <div class="project-card bg-slate-700/30 rounded-xl p-4 border border-slate-600/30">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Renewable Energy</h4>
+                                <p class="text-sm text-slate-400">Website Project</p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                                <div class="w-full h-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                                    <i class="fas fa-solar-panel text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full bg-slate-600 rounded-full h-2 mb-4">
+                            <div class="progress-bar"></div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-slate-400 font-medium">Renewable Energy</span>
+                            <button class="w-10 h-10 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </button>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card bg-slate-700/30 rounded-xl p-4 border border-slate-600/30">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">Travel Website</h4>
+                                <p class="text-sm text-slate-400">Tourist Web Project</p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                                <div class="w-full h-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                                    <i class="fas fa-shopping-cart text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full bg-slate-600 rounded-full h-2 mb-4">
+                            <div class="bg-gradient-to-r from-green-500 to-green-600 rounded-full h-2" style="width: 90%;"></div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-slate-400 font-medium">Travel Website</span>
+                            <button class="w-10 h-10 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card bg-slate-700/30 rounded-xl p-4 border border-slate-600/30">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">MindSpace</h4>
+                                <p class="text-sm text-slate-400">Mental Health App</p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                                <div class="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                                    <i class="fas fa-brain text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full bg-slate-600 rounded-full h-2 mb-4">
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-full h-2" style="width: 65%;"></div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-slate-400 font-medium">Health Platform</span>
+                            <button class="w-10 h-10 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card bg-slate-700/30 rounded-xl p-4 border border-slate-600/30">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">CryptoTracker</h4>
+                                <p class="text-sm text-slate-400">Finance Dashboard</p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                                <div class="w-full h-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                                    <i class="fab fa-bitcoin text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full bg-slate-600 rounded-full h-2 mb-4">
+                            <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full h-2" style="width: 80%;"></div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-slate-400 font-medium">Crypto Platform</span>
+                            <button class="w-10 h-10 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card bg-slate-700/30 rounded-xl p-4 border border-slate-600/30">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">FoodieHub</h4>
+                                <p class="text-sm text-slate-400">Restaurant App</p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                                <div class="w-full h-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                                    <i class="fas fa-utensils text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full bg-slate-600 rounded-full h-2 mb-4">
+                            <div class="bg-gradient-to-r from-red-500 to-red-600 rounded-full h-2" style="width: 95%;"></div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-slate-400 font-medium">Food Delivery</span>
+                            <button class="w-10 h-10 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card bg-slate-700/30 rounded-xl p-4 border border-slate-600/30">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h4 class="font-semibold text-white mb-1">StudyBuddy</h4>
+                                <p class="text-sm text-slate-400">Learning Management</p>
+                            </div>
+                            <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                                <div class="w-full h-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full bg-slate-600 rounded-full h-2 mb-4">
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-600 rounded-full h-2" style="width: 70%;"></div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-slate-400 font-medium">Education Platform</span>
+                            <button class="w-10 h-10 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services Card -->
+            <div class="glassmorphism rounded-2xl p-8 card-hover">
+                <h3 class="text-xl font-bold mb-6 text-white">My Services</h3>
+                
+                <div class="space-y-3">
+                    <div class="service-item flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-paint-brush text-purple-400 text-lg"></i>
+                        </div>
+                        <span class="text-white font-medium">UI / UX Design</span>
+                    </div>
+                    
+                    <div class="service-item flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-code text-blue-400 text-lg"></i>
+                        </div>
+                        <span class="text-white font-medium">Web Development</span>
+                    </div>
+                    
+                    <div class="service-item flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-green-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-mobile-alt text-green-400 text-lg"></i>
+                        </div>
+                        <span class="text-white font-medium">App Development</span>
+                    </div>
+                    
+                    <div class="service-item flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-orange-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-graduation-cap text-orange-400 text-lg"></i>
+                        </div>
+                        <span class="text-white font-medium">LMS Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+            
+            <!-- Expert Area with Fixed Dart Icon -->
+            <div class="glassmorphism rounded-2xl p-8 card-hover">
+                <h3 class="text-xl font-bold mb-6 text-white">My Expert Area</h3>
+                
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="text-center tech-icon">
+                        <div class="w-16 h-16 bg-pink-600/20 rounded-xl flex items-center justify-center mx-auto mb-3 border border-pink-600/30">
+                            <i class="fab fa-figma text-pink-400 text-2xl"></i>
+                        </div>
+                        <span class="text-sm text-white font-medium">Figma</span>
+                    </div>
+                    
+                    <div class="text-center tech-icon">
+                        <div class="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mx-auto mb-3 border border-blue-600/30">
+                            <div class="flutter-icon"></div>
+                        </div>
+                        <span class="text-sm text-white font-medium">Flutter</span>
+                    </div>
+                    
+                    <div class="text-center tech-icon">
+                        <div class="w-16 h-16 bg-blue-800/20 rounded-xl flex items-center justify-center mx-auto mb-3 border border-blue-800/30">
+                            <i class="fab fa-wordpress text-blue-300 text-2xl"></i>
+                        </div>
+                        <span class="text-sm text-white font-medium">WordPress</span>
+                    </div>
+                    
+                    <div class="text-center tech-icon">
+                        <div class="w-16 h-16 bg-teal-600/20 rounded-xl flex items-center justify-center mx-auto mb-3 border border-teal-600/30">
+                            <div class="dart-icon"></div>
+                        </div>
+                        <span class="text-sm text-white font-medium">Dart</span>
+                    </div>
+                    
+                    <div class="text-center tech-icon">
+                        <div class="w-16 h-16 bg-orange-600/20 rounded-xl flex items-center justify-center mx-auto mb-3 border border-orange-600/30">
+                            <i class="fab fa-html5 text-orange-400 text-2xl"></i>
+                        </div>
+                        <span class="text-sm text-white font-medium">HTML</span>
+                    </div>
+                    
+                    <div class="text-center tech-icon">
+                        <div class="w-16 h-16 bg-teal-600/20 rounded-xl flex items-center justify-center mx-auto mb-3 border border-teal-600/30">
+                            <div class="tailwind-icon"></div>
+                        </div>
+                        <span class="text-sm text-white font-medium">Tailwind</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section with Compact Centered Button -->
+            <div class="glassmorphism rounded-2xl p-8 card-hover text-center flex flex-col justify-center">
+                <h3 class="text-2xl font-bold mb-4 text-white">Let's work together.</h3>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    Have a project in mind or an idea to share? I'd love to hear from you. Let's create something amazing together!
+                </p>
+                
+                <div class="flex justify-center">
+                    <a href="contact.html">
+                    <button class="btn-work-together px-6 py-3 rounded-lg font-medium text-white">
+                        Let's Work Together
+                    </button>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

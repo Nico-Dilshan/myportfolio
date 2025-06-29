@@ -1,0 +1,91 @@
+<!-- Off-canvas Overlay -->
+<div class="off-canvas-overlay" id="offCanvasOverlay" onclick="closeOffCanvas()"></div>
+
+<!-- Off-canvas Menu -->
+<div class="off-canvas-menu" id="offCanvasMenu">
+    <!-- Logo Section -->
+    <div class="off-canvas-logo-section">
+        <span class="off-canvas-logo">
+            <span class="text-purple-400">Nico</span> Dilshan
+        </span>
+    </div>
+    
+    <!-- Navigation Links -->
+    <a href="index.html" class="off-canvas-menu-item" data-page="home" onclick="closeOffCanvas()">
+        <i class="fas fa-home"></i>
+        Home
+    </a>
+    <a href="about.html" class="off-canvas-menu-item" data-page="about" onclick="closeOffCanvas()">
+        <i class="fas fa-user"></i>
+        About
+    </a>
+    <a href="services.html" class="off-canvas-menu-item" data-page="services" onclick="closeOffCanvas()">
+        <i class="fas fa-cogs"></i>
+        Services
+    </a>
+    <a href="projects.html" class="off-canvas-menu-item" data-page="projects" onclick="closeOffCanvas()">
+        <i class="fas fa-briefcase"></i>
+        Projects
+    </a>
+
+    <a href="contact.html" class="off-canvas-menu-item" data-page="contact" onclick="closeOffCanvas()">
+        <i class="fas fa-envelope"></i>
+        Contact
+    </a>
+    
+    <!-- Mobile Hire Me Button - UPDATED -->
+    <a href="contact.html" class="mobile-hire-btn block" onclick="closeOffCanvas()">
+        Hire Me
+    </a>
+</div>
+
+<!-- STICKY Navigation -->
+<nav class="fixed top-0 left-0 w-full nav-blur border-b border-slate-700 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-6">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold">
+                    <span class="text-purple-400">Nico</span> Dilshan
+                </a>
+            </div>
+            
+            <!-- Desktop Menu with Icons -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="desktop-nav-item transition-colors font-medium" data-page="home">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="about.html" class="desktop-nav-item transition-colors font-medium" data-page="about">
+                    <i class="fas fa-user"></i>
+                    About
+                </a>
+                <a href="services.html" class="desktop-nav-item transition-colors font-medium" data-page="services">
+                    <i class="fas fa-cogs"></i>
+                    Services
+                </a>
+                <a href="projects.html" class="desktop-nav-item transition-colors font-medium" data-page="projects">
+                    <i class="fas fa-briefcase"></i>
+                    Projects
+                </a>
+
+                <a href="contact.html" class="desktop-nav-item transition-colors font-medium" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+            
+            <!-- Desktop Hire Me Button - UPDATED -->
+            <a href="contact.html" class="btn-primary px-6 py-2 rounded-lg font-medium hidden md:block">
+                Hire Me
+            </a>
+            
+            <!-- Mobile Hamburger Button -->
+            <button class="md:hidden text-slate-300 hover:text-white transition-colors mobile-hamburger" onclick="openOffCanvas()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Add padding top to prevent content overlap -->
+<div class="pt-20"></div>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Nico Dilshan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-in': 'slide-in 0.3s ease-out',
+                        'slide-out': 'slide-out 0.3s ease-in',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-white min-h-screen">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        
+        <!-- Hero Section -->
+        <div class="text-center py-4 lg:py-6">
+            <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 lg:mb-6 text-white">
+                My <span class="text-purple-400">Projects</span>
+            </h1>
+            <p class="text-slate-400 text-sm lg:text-base xl:text-lg max-w-4xl mx-auto leading-relaxed">
+                Take a look at some of the projects I've worked on. Each project represents a unique challenge, innovative solutions and a focus on user experience.
+            </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8 lg:mb-10">
+            
+            <!-- Project 1 - EcoCommerce (Updated with image support) -->
+            <div class="glassmorphism rounded-2xl overflow-hidden card-hover project-card">
+                <div class="relative group">
+                    <div class="project-image bg-gradient-to-br from-orange-400 to-orange-600 h-48 lg:h-52 flex items-center justify-center relative overflow-hidden">
+                        <!-- Default icon (will be hidden when image is loaded) -->
+                        <i class="fas fa-shopping-cart text-white text-4xl default-icon"></i>
+                        
+                        <!-- Image container (add your image here) -->
+                        <img id="ecocommerce-image" 
+                             src="images/profile.png" 
+                             alt="EcoCommerce System" 
+                             class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+                             style="display: none;"
+                             onload="this.style.display='block'; this.style.opacity='1'; this.parentElement.querySelector('.default-icon').style.display='none';"
+                             onerror="this.style.display='none'; this.parentElement.querySelector('.default-icon').style.display='block';">
+                        
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg lg:text-xl font-bold text-white">EcoCommerce</h3>
+                            <span class="text-xs bg-orange-500/20 text-orange-400 px-2 py-1 rounded-full">E-commerce</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Sustainable shopping platform with eco-friendly product focus and carbon footprint tracking.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-500">React • Node.js</span>
+                            <div onclick="openProject('https://google.com')" class="w-8 h-8 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 - TechFlow CRM (Fixed gradient background) -->
+            <div class="glassmorphism rounded-2xl overflow-hidden card-hover project-card">
+                <div class="relative group">
+                    <div class="project-image bg-gradient-to-br from-blue-400 to-blue-600 h-48 lg:h-52 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-4xl"></i>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg lg:text-xl font-bold text-white">TechFlow CRM</h3>
+                            <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">SaaS</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Advanced customer relationship management system with AI-powered insights and automation.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-500">Vue.js • Python</span>
+                            <div onclick="openProject('https://google.com')" class="w-8 h-8 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 - EduLearn -->
+            <div class="glassmorphism rounded-2xl overflow-hidden card-hover project-card">
+                <div class="relative group">
+                    <div class="project-image bg-gradient-to-br from-green-400 to-green-600 h-48 lg:h-52 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-4xl"></i>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg lg:text-xl font-bold text-white">EduLearn</h3>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">LMS</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Interactive learning management system with video streaming and progress tracking features.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-500">React • Node.js</span>
+                            <div onclick="openProject('https://google.com')" class="w-8 h-8 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 - FinTracker -->
+            <div class="glassmorphism rounded-2xl overflow-hidden card-hover project-card">
+                <div class="relative group">
+                    <div class="project-image bg-gradient-to-br from-purple-400 to-purple-600 h-48 lg:h-52 flex items-center justify-center">
+                        <i class="fas fa-wallet text-white text-4xl"></i>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg lg:text-xl font-bold text-white">FinTracker</h3>
+                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded-full">Finance</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Personal finance management app with budget tracking and investment portfolio analysis.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-500">Flutter • Firebase</span>
+                            <div onclick="openProject('https://google.com')" class="w-8 h-8 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 - HealthCare Plus -->
+            <div class="glassmorphism rounded-2xl overflow-hidden card-hover project-card">
+                <div class="relative group">
+                    <div class="project-image bg-gradient-to-br from-red-400 to-red-600 h-48 lg:h-52 flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-white text-4xl"></i>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg lg:text-xl font-bold text-white">HealthCare Plus</h3>
+                            <span class="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded-full">Healthcare</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Telemedicine platform connecting patients with healthcare providers for virtual consultations.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-500">Angular • .NET</span>
+                            <div onclick="openProject('https://google.com')" class="w-8 h-8 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 - TravelMate -->
+            <div class="glassmorphism rounded-2xl overflow-hidden card-hover project-card">
+                <div class="relative group">
+                    <div class="project-image bg-gradient-to-br from-teal-400 to-teal-600 h-48 lg:h-52 flex items-center justify-center">
+                        <i class="fas fa-plane text-white text-4xl"></i>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-lg lg:text-xl font-bold text-white">TravelMate</h3>
+                            <span class="text-xs bg-teal-500/20 text-teal-400 px-2 py-1 rounded-full">Travel</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Complete travel planning application with booking management and itinerary optimization.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-500">React Native • MongoDB</span>
+                            <div onclick="openProject('https://google.com')" class="w-8 h-8 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <i class="fas fa-arrow-right text-sm text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ready to Collaborate Section -->
+        <div class="glassmorphism rounded-2xl p-6 lg:p-8 card-hover text-center">
+            <h2 class="text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 lg:mb-4 text-white">
+                Ready to Collaborate
+            </h2>
+            <h3 class="text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 lg:mb-6 text-white">
+                and Elevate? <span class="text-3xl lg:text-4xl xl:text-5xl">🚀</span>
+            </h3>
+            <p class="text-slate-400 text-sm lg:text-base xl:text-lg max-w-3xl mx-auto mb-6 lg:mb-8 leading-relaxed">
+                Whether you're launching a startup, rebranding or just getting started, I'm here to craft digital solutions that are fast, beautiful and user focused.
+            </p>
+            
+            <a href="contact.html">
+            <button class="btn-work-together px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-medium text-base lg:text-lg">
+                Let's Work Together
+            </button>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JavaScript Functions -->
+    <script>
+    function openProject(url) {
+        window.open(url, '_blank');
+    }
+
+    // Function to add image to EcoCommerce project
+    function addProjectImage(imagePath) {
+        const imageElement = document.getElementById('ecocommerce-image');
+        if (imageElement) {
+            imageElement.src = imagePath;
+        }
+    }
+
+    // Example usage (call this with your image path):
+    // addProjectImage('path/to/your/system-image.jpg');
+    </script>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

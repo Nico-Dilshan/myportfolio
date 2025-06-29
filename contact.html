@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nico Dilshan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-in': 'slide-in 0.3s ease-out',
+                        'slide-out': 'slide-out 0.3s ease-in',
+                        'popup-in': 'popup-in 0.3s ease-out',
+                        'popup-out': 'popup-out 0.3s ease-in',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes popup-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        
+        @keyframes popup-out {
+            0% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.8) translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Custom Popup Overlay -->
+    <div id="popup-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div id="popup-content" class="bg-slate-800/90 backdrop-blur-lg border border-slate-600/50 rounded-2xl p-8 max-w-md mx-4 text-center animate-popup-in">
+            <div id="popup-icon" class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
+                <!-- Icon will be inserted here -->
+            </div>
+            <h3 id="popup-title" class="text-xl font-semibold text-white mb-3"></h3>
+            <p id="popup-message" class="text-slate-300 mb-6 leading-relaxed"></p>
+            <button id="popup-ok-btn" class="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 px-8 py-3 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        
+        <!-- Contact Grid Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Left Side - Contact Form -->
+            <div class="glassmorphism rounded-3xl p-8 card-hover">
+              <div class="mb-8 text-center lg:text-center">
+               <h1 class="text-3xl lg:text-4xl font-bold text-white mb-4">Connect With Me</h1>
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Feel free to reach out if you have any questions, collaboration ideas, or just want to say hi! I'm always open to connecting with new people and exploring exciting opportunities.
+            </p>
+            </div>
+
+                <!-- Contact Form with EmailJS -->
+                <form id="contact-form" class="space-y-6">
+                    <!-- Name -->
+                    <div>
+                        <input type="text" id="name" name="from_name" required
+                               class="w-full px-4 py-4 bg-slate-800/60 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                               placeholder="Name">
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div>
+                        <input type="tel" id="phone" name="phone_number" 
+                               class="w-full px-4 py-4 bg-slate-800/60 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                               placeholder="Phone Number">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <input type="email" id="email" name="from_email" required
+                               class="w-full px-4 py-4 bg-slate-800/60 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                               placeholder="E - Mail">
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <textarea id="message" name="message" rows="4" required
+                                  class="w-full px-4 py-4 bg-slate-800/60 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 resize-none"
+                                  placeholder="Message"></textarea>
+                    </div>
+
+                    <!-- Send Button -->
+                    <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 py-4 px-6 rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/25">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Side - Contact Info -->
+            <div class="glassmorphism rounded-3xl p-8 card-hover">
+                <div class="space-y-8">
+                    
+                    <!-- Mobile Number -->
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-1">Mobile Number</h3>
+                            <p class="text-slate-300 text-sm">0742647449</p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-1">E - Mail</h3>
+                            <p class="text-slate-300 text-sm">nipund001@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-1">Location</h3>
+                            <p class="text-slate-300 text-sm">Panadura</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Info Section -->
+                    <div class="pt-6 border-t border-slate-600/30">
+                        <h3 class="font-semibold text-white mb-6">Social Info</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-white/10 hover:bg-purple-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                                <i class="fab fa-facebook-f text-white text-lg"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nicodilshan" class="w-12 h-12 bg-white/10 hover:bg-purple-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                                <i class="fab fa-linkedin-in text-white text-lg"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white/10 hover:bg-purple-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                                <i class="fab fa-instagram text-white text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="mt-8">
+            <div class="glassmorphism rounded-3xl overflow-hidden card-hover">
+                <div class="h-80 lg:h-96 relative">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58937875634!2d80.15507985!3d6.0329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173bb6932fce3%3A0x4a35b903f9c64c03!2sGalle%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1703123456789"
+                        class="w-full h-full border-0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg">
+                        <a href="#" class="text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors">
+                            View larger map
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Form JavaScript -->
+    <script>
+    // Custom popup function
+    function showCustomPopup(type, title, message) {
+        const overlay = document.getElementById('popup-overlay');
+        const content = document.getElementById('popup-content');
+        const icon = document.getElementById('popup-icon');
+        const titleEl = document.getElementById('popup-title');
+        const messageEl = document.getElementById('popup-message');
+        
+        // Set content
+        titleEl.textContent = title;
+        messageEl.textContent = message;
+        
+        // Set icon based on type
+        if (type === 'success') {
+            icon.className = 'w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-green-500/20';
+            icon.innerHTML = '<i class="fas fa-check text-green-400 text-2xl"></i>';
+        } else if (type === 'error') {
+            icon.className = 'w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-red-500/20';
+            icon.innerHTML = '<i class="fas fa-exclamation-triangle text-red-400 text-2xl"></i>';
+        } else {
+            icon.className = 'w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-blue-500/20';
+            icon.innerHTML = '<i class="fas fa-info text-blue-400 text-2xl"></i>';
+        }
+        
+        // Show popup
+        overlay.classList.remove('hidden');
+        content.classList.remove('animate-popup-out');
+        content.classList.add('animate-popup-in');
+    }
+    
+    function hideCustomPopup() {
+        const overlay = document.getElementById('popup-overlay');
+        const content = document.getElementById('popup-content');
+        
+        content.classList.remove('animate-popup-in');
+        content.classList.add('animate-popup-out');
+        
+        setTimeout(() => {
+            overlay.classList.add('hidden');
+        }, 300);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize EmailJS with your public key
+        emailjs.init("rVnQl3iPYX-N96FoG"); // Replace with your actual public key from EmailJS
+        
+        const form = document.querySelector('#contact-form');
+        const submitBtn = document.querySelector('#submit-btn');
+        const popupOkBtn = document.getElementById('popup-ok-btn');
+        const popupOverlay = document.getElementById('popup-overlay');
+        
+        // Close popup when OK button is clicked
+        popupOkBtn.addEventListener('click', hideCustomPopup);
+        
+        // Close popup when clicking outside the popup content
+        popupOverlay.addEventListener('click', function(e) {
+            if (e.target === popupOverlay) {
+                hideCustomPopup();
+            }
+        });
+        
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                hideCustomPopup();
+            }
+        });
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Basic validation
+            if (!name || !email || !message) {
+                showCustomPopup('error', 'Required Fields Missing', 'Please fill in all required fields (Name, Email, and Message).');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showCustomPopup('error', 'Invalid Email', 'Please enter a valid email address.');
+                return;
+            }
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            submitBtn.disabled = true;
+            
+            // Send email using EmailJS
+            emailjs.sendForm('service_vd3zspq', 'template_813of0l', form)
+                .then(function() {
+                    showCustomPopup('success', 'Message Sent Successfully!', 'Thank you for your message! I will get back to you soon.');
+                    form.reset();
+                }, function(error) {
+                    console.error('EmailJS error:', error);
+                    showCustomPopup('error', 'Send Failed', 'Sorry, there was an error sending your message. Please try again or contact me directly.');
+                })
+                .finally(function() {
+                    // Reset button
+                    submitBtn.innerHTML = 'Send Message';
+                    submitBtn.disabled = false;
+                });
+        });
+        
+        // Copy text to clipboard functionality
+        document.querySelectorAll('.text-slate-300').forEach(element => {
+            element.addEventListener('click', function() {
+                const text = this.textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    // Show temporary feedback
+                    const originalText = this.textContent;
+                    this.textContent = 'Copied!';
+                    this.classList.add('text-green-400');
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.classList.remove('text-green-400');
+                    }, 1000);
+                });
+            });
+        });
+    });
+    </script>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
